@@ -75,6 +75,7 @@ func (r *Requester) ExecuteGraphql(query string, variables map[string]interface{
 ) (map[string]interface{}, error) {
 	return r.ExecuteGraphqlWithContext(context.Background(), query, variables, signingKey)
 }
+
 func (r *Requester) ExecuteGraphqlWithContext(ctx context.Context, query string, variables map[string]interface{},
 	signingKey SigningKey,
 ) (map[string]interface{}, error) {
